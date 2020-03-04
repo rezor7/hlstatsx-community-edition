@@ -791,17 +791,9 @@ For support and installation notes visit http://www.hlxcommunity.com
 				</tr>
 				<tr class="data-table-head">
 					<td style="width:60%;">
-						<?php
-							$cellbody = '<img src="' . IMAGE_PATH . '/bar6.gif" width="';
-							if ($rankPercent < 1)
-								$cellbody .= '1%';
-							elseif ($rankPercent > 100)
-								$cellbody .= '100%';
-							else
-								$cellbody .= sprintf('%d%%', $rankPercent + 0.5);
-							$cellbody .= "\" style=\"height:10px;border:0;\" alt=\"$rankPercent%\" />";
-							echo $cellbody;
-						?>
+						<meter min="0" max="100" low="25" high="50" optimum="75" value="<?php
+                                        echo $rankPercent ?>"></meter>
+						
 					</td>
 					<td style="width:40%;">
 						Kills needed: <b><?php echo "$rankKillsNeeded (".number_format($rankPercent, 0, '.', '');?>%)</b>
