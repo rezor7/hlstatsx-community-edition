@@ -139,7 +139,10 @@ For support and installation notes visit http://www.hlxcommunity.com
 					<td>
 						<?php 
 							$prefix = ((!preg_match('/^BOT/i',$uqid)) && $g_options['Mode'] == 'Normal') ? 'STEAM_0:' : '';
-							echo "Steam: <a href=\"http://steamcommunity.com/profiles/$coid\" target=\"_blank\">$prefix" . "$uqid</a>";
+							echo "Steam: <a href=\"http://steamcommunity.com/profiles/$coid\" target=\"_blank\">$prefix" . "$uqid</a><br />";
+							echo "Найти: <b><a href=\"https://marcoplay.com/game/bans/search/?steamid=[$prefix]\" target=\"_blank\">Баны</a><br />";
+								<a href=\"https://marcoplay.com/game/mutes/search/?steamid=[$prefix]\" target=\"_blank\">Муты</a><br />";
+								<a href=\"https://marcoplay.com/game/warns/search/?steamid=[$prefix]\" target=\"_blank\">Варны</a></b>";
 						?>
 					</td>
 				</tr>
