@@ -170,6 +170,7 @@ $valid_modes = array(
 	'roles',
 	'rolesinfo',
 	'maps',
+	'last',
 	'actions',
 	'claninfo',
 	'playerinfo',
